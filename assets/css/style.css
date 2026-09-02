@@ -1,0 +1,42 @@
+/* EcoCycle — small custom touches layered on top of Tailwind (CDN). */
+
+:root {
+    color-scheme: light;
+}
+
+/* Subtle nature-inspired hero gradient. */
+.eco-hero {
+    background:
+        radial-gradient(1200px 400px at 80% -10%, rgba(74, 222, 128, 0.25), transparent 60%),
+        radial-gradient(900px 500px at 0% 10%, rgba(22, 163, 74, 0.12), transparent 55%),
+        linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+/* Soft card lift on hover for interactive tiles. */
+.eco-card {
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.eco-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px -12px rgba(21, 128, 61, 0.35);
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Accessible focus ring across custom controls. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #16a34a;
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+}
